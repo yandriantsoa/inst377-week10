@@ -1,5 +1,8 @@
 async function getCustomers(){
-    var test = await fetch('http://localhost:3000/customers', {
+    console.log('Creating Customer')
+    var host = window.location.origin;
+
+    var test = await fetch(`${host}/customers`, {
         method: 'GET',
         headers: {
             "Content-type": "application/json"
